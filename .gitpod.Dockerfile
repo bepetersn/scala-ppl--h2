@@ -15,3 +15,4 @@ RUN curl -fLo coursier https://git.io/coursier-cli \
 # Get Scala version 2.12.11
 RUN scalaenv install scala-2.12.11 && scalaenv global scala-2.12.11
 
+CMD jupyter notebook --ip 0.0.0.0 --NotebookApp.allow_origin=https://8888-$GITPOD_WORKSPACE_ID.ws-us08.gitpod.io
